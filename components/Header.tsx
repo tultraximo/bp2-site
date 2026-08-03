@@ -28,7 +28,7 @@ export default function Header() {
           className="text-xl font-bold tracking-tight text-gray-900"
           onClick={() => setIsOpen(false)}
         >
-          Blue Planet
+          Blue Planet Building Panels
         </Link>
 
         {/* Desktop Navigation */}
