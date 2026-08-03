@@ -1,49 +1,111 @@
+"use client";
+
 import Link from "next/link";
+import { useState } from "react";
 
 export default function Header() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const navLinks = [
+    { href: "/rips", label: "RIPS" },
+    { href: "/platform", label: "Platform" },
+    { href: "/technical", label: "Technical" },
+    { href: "/applications", label: "Applications" },
+    { href: "/team", label: "Team" },
+    { href: "/media", label: "Media" },
+    { href: "/faq", label: "FAQ" },
+    { href: "/resources", label: "Resources" },
+    { href: "/about", label: "About" },
+    { href: "/contact", label: "Contact" },
+  ];
+
   return (
     <header className="border-b border-gray-200 bg-white">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-        <Link href="/" className="text-xl font-bold tracking-tight text-gray-900">
+        {/* Logo */}
+        <Link
+          href="/"
+          className="text-xl font-bold tracking-tight text-gray-900"
+          onClick={() => setIsOpen(false)}
+        >
           Blue Planet
         </Link>
 
-        <nav className="hidden gap-5 text-sm font-medium text-gray-700 md:flex">
-          <Link href="/rips" className="hover:text-gray-900">
-            RIPS
-          </Link>
-          <Link href="/platform" className="hover:text-gray-900">
-            Platform
-          </Link>
-          <Link href="/technical" className="hover:text-gray-900">
-            Technical
-          </Link>
-          <Link href="/applications" className="hover:text-gray-900">
-            Applications
-          </Link>
-          <Link href="/team" className="hover:text-gray-900">
-            Team
-          </Link>
-          <Link href="/media" className="hover:text-gray-900">
-            Media
-          </Link>
-          <Link href="/faq" className="hover:text-gray-900">
-            FAQ
-          </Link>
-          <Link href="/resources" className="hover:text-gray-900">
-            Resources
-          </Link>
-          <Link href="/about" className="hover:text-gray-900">
-            About
-          </Link>
-          <Link
-            href="/contact"
-            className="rounded-md bg-gray-900 px-4 py-2 text-white hover:bg-gray-800"
-          >
-            Contact
-          </Link>
+        {/* Desktop Navigation */}
+        <nav className="hidden items-center gap-5 text-sm font-medium text-gray-700 md:flex">
+          {navLinks.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              className={
+                link.href === "/contact"
+                  ? "rounded-md bg-gray-900 px-4 py-2 text-white hover:bg-gray-800"
+                  : "hover:text-gray-900"
+              }
+            >
+              {link.label}
+            </Link>
+          ))}
         </nav>
+
+        {/* Mobile Menu Button */}
+        <button
+          type="button"
+          className="inline-flex items-center justify-center rounded-md p-2 text-gray-700 hover:bg-gray-100 md:hidden"
+          onClick={() => setIsOpen(!isOpen)}
+          aria-label="Toggle menu"
+        >
+          {isOpen ? (
+            // X icon
+            <svg
+              className="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth="1.5"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          ) : (
+            // Hamburger icon
+            <svg
+              className="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth="1.5"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+              />
+            </svg>
+          )}
+        </button>
       </div>
+
+      {/* Mobile Menu */}
+      {isOpen && (
+        <div className="border-t border-gray-200 bg-white md:hidden">
+          <nav className="flex flex-col px-6 py-4">
+            {navLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="border-b border-gray-100 py-3 text-sm font-medium text-gray-700 last:border-0 hover:text-gray-900"
+                onClick={() => setIsOpen(false)}
+              >
+                {link.label}
+              </Link>
+            ))}
+          </nav>
+        </div>
+      )}
     </header>
   );
 }
