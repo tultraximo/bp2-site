@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 
 export default function Header() {
@@ -21,14 +22,22 @@ export default function Header() {
 
   return (
     <header className="border-b border-gray-200 bg-white">
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+      <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-3">
         {/* Logo */}
+
         <Link
           href="/"
-          className="text-xl font-bold tracking-tight text-gray-900"
           onClick={() => setIsOpen(false)}
+          className="flex items-center"
         >
-          Blue Planet Building Panels
+          <Image
+            src="/logo.png"
+            alt="Blue Planet Building Panels"
+            width={180}
+            height={60}
+            className="h-10 w-auto md:h-12"
+            priority
+          />
         </Link>
 
         {/* Desktop Navigation */}
@@ -56,7 +65,6 @@ export default function Header() {
           aria-label="Toggle menu"
         >
           {isOpen ? (
-            // X icon
             <svg
               className="h-6 w-6"
               fill="none"
@@ -71,7 +79,6 @@ export default function Header() {
               />
             </svg>
           ) : (
-            // Hamburger icon
             <svg
               className="h-6 w-6"
               fill="none"
