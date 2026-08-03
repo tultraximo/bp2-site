@@ -8,9 +8,9 @@ export default function Header() {
           Blue Planet
         </Link>
 
-        <nav className="hidden gap-6 text-sm font-medium text-gray-700 md:flex">
+        <nav className="hidden gap-5 text-sm font-medium text-gray-700 md:flex">
           <Link href="/rips" className="hover:text-gray-900">
-            The RIPS System
+            RIPS
           </Link>
           <Link href="/platform" className="hover:text-gray-900">
             Platform
@@ -26,6 +26,12 @@ export default function Header() {
           </Link>
           <Link href="/media" className="hover:text-gray-900">
             Media
+          </Link>
+          <Link href="/faq" className="hover:text-gray-900">
+            FAQ
+          </Link>
+          <Link href="/resources" className="hover:text-gray-900">
+            Resources
           </Link>
           <Link href="/about" className="hover:text-gray-900">
             About

@@ -38,6 +38,9 @@ export default function Footer() {
               >
                 Applications
               </Link>
+              <Link href="/faq" className="text-gray-600 hover:text-gray-900">
+                FAQ
+              </Link>
             </div>
 
             <div className="flex flex-col gap-2">
@@ -47,6 +50,12 @@ export default function Footer() {
               </Link>
               <Link href="/media" className="text-gray-600 hover:text-gray-900">
                 Media
+              </Link>
+              <Link
+                href="/resources"
+                className="text-gray-600 hover:text-gray-900"
+              >
+                Resources
               </Link>
               <Link href="/about" className="text-gray-600 hover:text-gray-900">
                 About
