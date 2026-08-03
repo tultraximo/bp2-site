@@ -8,34 +8,53 @@ export default function Footer() {
           <div>
             <div className="text-lg font-bold text-gray-900">Blue Planet</div>
             <p className="mt-2 max-w-sm text-sm text-gray-600">
-              Advanced panelized building systems. High-performance envelopes that enable
-              lower energy, greater resilience, and smarter construction.
+              Advanced panelized building systems. High-performance envelopes
+              that enable lower energy, greater resilience, and smarter
+              construction.
             </p>
           </div>
 
-          <div className="flex gap-12 text-sm">
+          <div className="flex flex-wrap gap-12 text-sm">
             <div className="flex flex-col gap-2">
               <div className="font-semibold text-gray-900">Explore</div>
               <Link href="/rips" className="text-gray-600 hover:text-gray-900">
                 The RIPS System
               </Link>
-              <Link href="/platform" className="text-gray-600 hover:text-gray-900">
+              <Link
+                href="/platform"
+                className="text-gray-600 hover:text-gray-900"
+              >
                 High-Performance Platform
               </Link>
-              <Link href="/technical" className="text-gray-600 hover:text-gray-900">
+              <Link
+                href="/technical"
+                className="text-gray-600 hover:text-gray-900"
+              >
                 Technical Resources
               </Link>
-              <Link href="/applications" className="text-gray-600 hover:text-gray-900">
+              <Link
+                href="/applications"
+                className="text-gray-600 hover:text-gray-900"
+              >
                 Applications
               </Link>
             </div>
 
             <div className="flex flex-col gap-2">
               <div className="font-semibold text-gray-900">Company</div>
+              <Link href="/team" className="text-gray-600 hover:text-gray-900">
+                Team
+              </Link>
+              <Link href="/media" className="text-gray-600 hover:text-gray-900">
+                Media
+              </Link>
               <Link href="/about" className="text-gray-600 hover:text-gray-900">
                 About
               </Link>
-              <Link href="/contact" className="text-gray-600 hover:text-gray-900">
+              <Link
+                href="/contact"
+                className="text-gray-600 hover:text-gray-900"
+              >
                 Contact
               </Link>
             </div>
