@@ -108,7 +108,7 @@ export default function HomePage() {
                     Standard residential walls typically rate STC 33–36. BP2 panels deliver STC 50
                     as standard — already well above conventional construction. STC 58 (suitable
                     for party walls and secure conference rooms) is readily achievable by adding
-                    approximately ½ inch of concrete to the skin.
+                    approximately 2 inch of concrete to the skin.
                   </p>
                 </div>
                 <div className="rounded-lg border border-gray-300 bg-white p-6 text-center shadow-sm">
