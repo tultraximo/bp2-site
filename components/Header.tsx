@@ -23,19 +23,19 @@ export default function Header() {
   return (
     <header className="border-b border-gray-200 bg-white">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-3">
-        {/* Logo */}
-
+        {/* Logo - fixed height, natural aspect ratio */}
         <Link
           href="/"
           onClick={() => setIsOpen(false)}
-          className="flex items-center"
+          className="flex-shrink-0"
         >
           <Image
             src="/logo.png"
             alt="Blue Planet Building Panels"
-            width={180}
-            height={60}
-            className="h-10 w-auto md:h-12"
+            width={200}
+            height={70}
+            className="h-10 w-auto md:h-11"
+            style={{ width: "auto", height: "auto", maxHeight: "2.75rem" }}
             priority
           />
         </Link>

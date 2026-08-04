@@ -6,7 +6,9 @@ export default function HomePage() {
     <div>
       {/* Hero */}
       <section className="bg-gray-50">
-<div className="mx-auto max-w-6xl px-6 pt-10 pb-16 md:pt-14 md:pb-24">          <div className="flex flex-col items-center text-center">
+        <div className="mx-auto max-w-6xl px-6 pt-10 pb-16 md:pt-14 md:pb-24">
+          {" "}
+          <div className="flex flex-col items-center text-center">
             {/* Logo */}
             <Image
               src="/logo.png"
@@ -89,7 +91,7 @@ export default function HomePage() {
           <h2 className="text-2xl font-bold tracking-tight text-gray-900">
             Built for performance and resilience
           </h2>
-          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             <div className="rounded-lg border border-gray-200 p-6">
               <h3 className="font-semibold text-gray-900">Non-Combustible</h3>
               <p className="mt-2 text-sm text-gray-600">
@@ -98,10 +100,22 @@ export default function HomePage() {
               </p>
             </div>
             <div className="rounded-lg border border-gray-200 p-6">
-              <h3 className="font-semibold text-gray-900">High Insulation</h3>
+              <h3 className="font-semibold text-gray-900">
+                Thermal Insulation
+              </h3>
               <p className="mt-2 text-sm text-gray-600">
                 Foam core + isolated mass deliver strong thermal performance and
                 reduced peak loads.
+              </p>
+            </div>
+            <div className="rounded-lg border border-gray-200 p-6">
+              <h3 className="font-semibold text-gray-900">Sound Insulation</h3>
+              <p className="mt-2 text-sm text-gray-600">
+                Standard residential walls typically rate STC 33–36. BP2 panels
+                deliver STC 50 as standard — already well above conventional
+                construction. STC 58 (suitable for party walls and secure
+                conference rooms) is readily achievable by adding approximately
+                2 inches of concrete to the skin.
               </p>
             </div>
             <div className="rounded-lg border border-gray-200 p-6">
