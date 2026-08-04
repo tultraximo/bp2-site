@@ -3,6 +3,12 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
+import { Bebas_Neue } from "next/font/google";
+
+const bebasNeue = Bebas_Neue({
+  subsets: ["latin"],
+  weight: "400",
+});
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -21,98 +27,84 @@ export default function Header() {
   ];
 
   return (
-    <header className="border-b border-gray-200 bg-white">
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-3">
-        {/* Logo - fixed height, natural aspect ratio */}
-        <Link
-          href="/"
-          onClick={() => setIsOpen(false)}
-          className="flex-shrink-0"
-        >
-          <Image
-            src="/logo.png"
-            alt="Blue Planet Building Panels"
-            width={200}
-            height={70}
-            className="h-10 w-auto md:h-11"
-            style={{ width: "auto", height: "auto", maxHeight: "2.75rem" }}
-            priority
-          />
-        </Link>
+    <div className="bg-gray-100 px-4 pt-3 sm:px-6">
+      <header className="mx-auto max-w-6xl overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm">
+        <div className="flex items-center justify-between gap-4 px-5 py-5">
 
-        {/* Desktop Navigation */}
-        <nav className="hidden items-center gap-5 text-sm font-medium text-gray-700 md:flex">
-          {navLinks.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className={
-                link.href === "/contact"
-                  ? "rounded-md bg-gray-900 px-4 py-2 text-white hover:bg-gray-800"
-                  : "hover:text-gray-900"
-              }
-            >
-              {link.label}
-            </Link>
-          ))}
-        </nav>
+          {/* Desktop Logo */}
+          <Link href="/" onClick={() => setIsOpen(false)} className="hidden flex-shrink-0 lg:block">
+            <Image
+              src="/logo.png"
+              alt="Blue Planet Building Panels"
+              width={300}
+              height={110}
+              className="h-16 w-auto lg:h-[4.5rem]"
+              style={{ width: "auto", height: "auto", maxHeight: "4.5rem" }}
+              priority
+            />
+          </Link>
 
-        {/* Mobile Menu Button */}
-        <button
-          type="button"
-          className="inline-flex items-center justify-center rounded-md p-2 text-gray-700 hover:bg-gray-100 md:hidden"
-          onClick={() => setIsOpen(!isOpen)}
-          aria-label="Toggle menu"
-        >
-          {isOpen ? (
-            <svg
-              className="h-6 w-6"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth="1.5"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M6 18L18 6M6 6l12 12"
-              />
-            </svg>
-          ) : (
-            <svg
-              className="h-6 w-6"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth="1.5"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-              />
-            </svg>
-          )}
-        </button>
-      </div>
+          {/* Mobile Title */}
+          <Link
+            href="/"
+            onClick={() => setIsOpen(false)}
+            className={`flex-1 text-center lg:hidden ${bebasNeue.className}`}
+          >
+            <div className="text-4xl tracking-wider text-gray-900 sm:text-5xl">
+              BLUE PLANET BUILDING PANELS
+            </div>
+          </Link>
 
-      {/* Mobile Menu */}
-      {isOpen && (
-        <div className="border-t border-gray-200 bg-white md:hidden">
-          <nav className="flex flex-col px-6 py-4">
+          {/* Desktop Navigation */}
+          <nav className="hidden flex-wrap items-center justify-end gap-3 text-lg font-semibold lg:flex">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className="border-b border-gray-100 py-3 text-sm font-medium text-gray-700 last:border-0 hover:text-gray-900"
-                onClick={() => setIsOpen(false)}
+                className="rounded-lg border border-gray-200 bg-gray-50 px-7 py-4 text-black transition-colors hover:border-transparent hover:bg-[#3F6FEC] hover:text-white"
               >
                 {link.label}
               </Link>
             ))}
           </nav>
+
+          {/* Mobile Menu Button */}
+          <button
+            type="button"
+            className="mr-1 inline-flex items-center justify-center rounded-lg border border-gray-300 bg-gray-50 p-3 shadow-sm hover:bg-gray-100 lg:hidden"
+            onClick={() => setIsOpen(!isOpen)}
+            aria-label="Toggle menu"
+          >
+            {isOpen ? (
+              <svg className="h-8 w-8" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="#3F6FEC">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            ) : (
+              <svg className="h-8 w-8" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="#3F6FEC">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+              </svg>
+            )}
+          </button>
         </div>
-      )}
-    </header>
+
+        {/* Mobile Menu */}
+        {isOpen && (
+          <div className="border-t border-gray-200 lg:hidden">
+            <nav className="flex flex-col gap-2 px-5 py-4">
+              {navLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="rounded-lg border border-gray-200 bg-gray-50 px-6 py-4 text-lg font-semibold text-black transition-colors hover:border-transparent hover:bg-[#3F6FEC] hover:text-white"
+                  onClick={() => setIsOpen(false)}
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </nav>
+          </div>
+        )}
+      </header>
+    </div>
   );
 }
