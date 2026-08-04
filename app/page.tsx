@@ -3,10 +3,11 @@ import Image from "next/image";
 
 export default function HomePage() {
   return (
-<div className="min-h-screen bg-gray-100 px-4 py-3 sm:px-6">      {/* Large outer encapsulating card – off white */}
+    <div className="min-h-screen bg-gray-100 px-4 py-3 sm:px-6">
+      {" "}
+      {/* Large outer encapsulating card – off white */}
       <div className="mx-auto max-w-6xl overflow-hidden rounded-xl border border-gray-200 bg-gray-50 p-4 shadow-sm sm:p-6 md:p-8">
         <div className="space-y-6">
-
           {/* Logo Card */}
           <section className="overflow-hidden rounded-xl border border-gray-300 bg-white shadow-sm">
             <div className="flex justify-center px-6 py-10 md:px-10">
@@ -31,9 +32,10 @@ export default function HomePage() {
                 BP2 RIPS Building Systems
               </h1>
               <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-gray-700">
-                Code-compliant structural panels that deliver a high-performance building
-                platform — full structural capability, exceptional thermal mass, and the
-                foundation for lower-energy, resilient buildings.
+                Code-compliant structural panels that deliver a high-performance
+                building platform — full structural capability, exceptional
+                thermal mass, and the foundation for lower-energy, resilient
+                buildings.
               </p>
               <div className="mt-10 flex flex-wrap justify-center gap-4">
                 <Link
@@ -58,24 +60,31 @@ export default function HomePage() {
           <section className="overflow-hidden rounded-xl border border-gray-300 bg-white shadow-sm">
             <div className="grid gap-6 p-6 md:grid-cols-3 md:p-8">
               <div className="rounded-lg border border-gray-300 bg-gray-100 p-5 text-center shadow-sm">
-                <h2 className="text-lg font-semibold text-gray-900">Fully Code Compliant</h2>
+                <h2 className="text-lg font-semibold text-gray-900">
+                  Fully Code Compliant
+                </h2>
                 <p className="mt-2 text-sm leading-relaxed text-gray-600">
-                  Meets IRC and IBC requirements. Designed to ACI 318. No special Engineering
-                  Report required in typical applications.
+                  Meets IRC and IBC requirements. Designed to ACI 318. No
+                  special Engineering Report required in typical applications.
                 </p>
               </div>
               <div className="rounded-lg border border-gray-300 bg-gray-100 p-5 text-center shadow-sm">
-                <h2 className="text-lg font-semibold text-gray-900">Full Structural Capability</h2>
+                <h2 className="text-lg font-semibold text-gray-900">
+                  Full Structural Capability
+                </h2>
                 <p className="mt-2 text-sm leading-relaxed text-gray-600">
-                  Engineered for walls, roofs, and floors — a complete structural system rather
-                  than a wall-only solution.
+                  Engineered for walls, roofs, and floors — a complete
+                  structural system rather than a wall-only solution.
                 </p>
               </div>
               <div className="rounded-lg border border-gray-300 bg-gray-100 p-5 text-center shadow-sm">
-                <h2 className="text-lg font-semibold text-gray-900">High-Mass Airtight Envelope</h2>
+                <h2 className="text-lg font-semibold text-gray-900">
+                  High-Mass Airtight Envelope
+                </h2>
                 <p className="mt-2 text-sm leading-relaxed text-gray-600">
-                  Isolated concrete shells deliver significant thermal mass and near-zero air
-                  infiltration — the foundation of a high-performance platform.
+                  Isolated concrete shells deliver significant thermal mass and
+                  near-zero air infiltration — the foundation of a
+                  high-performance platform.
                 </p>
               </div>
             </div>
@@ -89,38 +98,51 @@ export default function HomePage() {
               </h2>
               <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
                 <div className="rounded-lg border border-gray-300 bg-white p-6 text-center shadow-sm">
-                  <h3 className="font-semibold text-gray-900">Non-Combustible</h3>
+                  <h3 className="font-semibold text-gray-900">
+                    Non-Combustible
+                  </h3>
                   <p className="mt-2 text-sm text-gray-600">
-                    Concrete shells on all sides. Strong advantages for mid-rise and mixed-use
-                    projects.
+                    Concrete shells on all sides. Strong advantages for mid-rise
+                    and mixed-use projects.
                   </p>
                 </div>
                 <div className="rounded-lg border border-gray-300 bg-white p-6 text-center shadow-sm">
-                  <h3 className="font-semibold text-gray-900">Thermal Insulation</h3>
+                  <h3 className="font-semibold text-gray-900">
+                    Thermal Insulation
+                  </h3>
                   <p className="mt-2 text-sm text-gray-600">
-                    Foam core + isolated mass deliver strong thermal performance and reduced
-                    peak loads.
+                    Foam core + isolated mass deliver strong thermal performance
+                    and reduced peak loads.
                   </p>
                 </div>
                 <div className="rounded-lg border border-gray-300 bg-white p-6 text-center shadow-sm">
-                  <h3 className="font-semibold text-gray-900">Sound Insulation</h3>
+                  <h3 className="font-semibold text-gray-900">
+                    Sound Insulation
+                  </h3>
                   <p className="mt-2 text-sm text-gray-600">
-                    Standard residential walls typically rate STC 33–36. BP2 panels deliver STC 50
-                    as standard — already well above conventional construction. STC 58 (suitable
-                    for party walls and secure conference rooms) is readily achievable by adding
-                    approximately 2 inch of concrete to the skin.
+                    Standard residential walls typically rate STC 33–36. BP2
+                    panels deliver STC 50 as standard — already well above
+                    conventional construction. STC 58 (suitable for party walls
+                    and secure conference rooms) is readily achievable by adding
+                    approximately 2 inches of concrete to the skin.
                   </p>
                 </div>
                 <div className="rounded-lg border border-gray-300 bg-white p-6 text-center shadow-sm">
-                  <h3 className="font-semibold text-gray-900">Extreme Durability</h3>
+                  <h3 className="font-semibold text-gray-900">
+                    Extreme Durability
+                  </h3>
                   <p className="mt-2 text-sm text-gray-600">
-                    Engineered to resist hurricanes, earthquakes, fire, floods, mold, and pests.
+                    Engineered to resist hurricanes, earthquakes, fire, floods,
+                    mold, and pests.
                   </p>
                 </div>
                 <div className="rounded-lg border border-gray-300 bg-white p-6 text-center shadow-sm">
-                  <h3 className="font-semibold text-gray-900">Faster Construction</h3>
+                  <h3 className="font-semibold text-gray-900">
+                    Faster Construction
+                  </h3>
                   <p className="mt-2 text-sm text-gray-600">
-                    Panelized installation is typically 30–50% faster than traditional methods.
+                    Panelized installation is typically 30–50% faster than
+                    traditional methods.
                   </p>
                 </div>
               </div>
@@ -134,9 +156,10 @@ export default function HomePage() {
                 More than panels — a high-performance building platform
               </h2>
               <p className="mx-auto mt-6 max-w-3xl text-lg leading-relaxed text-gray-600">
-                RIPS creates an airtight, high-mass envelope that changes how a building
-                behaves thermally. Peak loads are buffered. Mechanical systems can be
-                right-sized. The structure itself becomes a thermal battery.
+                RIPS creates an airtight, high-mass envelope that changes how a
+                building behaves thermally. Peak loads are buffered. Mechanical
+                systems can be right-sized. The structure itself becomes a
+                thermal battery.
               </p>
               <div className="mt-8">
                 <Link
@@ -192,8 +215,9 @@ export default function HomePage() {
                 Evaluate RIPS for your next project
               </h2>
               <p className="mx-auto mt-4 max-w-xl text-gray-600">
-                Architects and engineers — contact us to discuss structural performance,
-                code path, envelope behavior, and integration opportunities.
+                Architects and engineers — contact us to discuss structural
+                performance, code path, envelope behavior, and integration
+                opportunities.
               </p>
               <div className="mt-8">
                 <Link
@@ -206,7 +230,6 @@ export default function HomePage() {
               </div>
             </div>
           </section>
-
         </div>
       </div>
     </div>
