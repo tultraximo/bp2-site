@@ -1,5 +1,11 @@
 import Link from "next/link";
 
+export const metadata = {
+  title: "BP2 RIPS FAQ | Fire Rating, R-40, Code Path",
+  description:
+    "Answers on BP2 SCIPs and RIPS: fire rating, R-40 performance, STC, codes, comparisons to ICFs and SIPs, and construction details.",
+};
+
 export default function FaqPage() {
   return (
     <div>

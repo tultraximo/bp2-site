@@ -1,5 +1,11 @@
 import Link from "next/link";
 
+export const metadata = {
+  title: "Meet the Blue Planet Team",
+  description:
+    "Hear from the Blue Planet Building Panels team about BP2 RIPS and the work behind the system.",
+};
+
 const team = [
   {
     name: "Alan Khedari",

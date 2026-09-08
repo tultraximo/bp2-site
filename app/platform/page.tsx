@@ -1,5 +1,11 @@
 import Link from "next/link";
 
+export const metadata = {
+  title: "RIPS High-Performance Building Platform | Thermal Mass Envelope",
+  description:
+    "How BP2 RIPS creates an isolated high-mass airtight envelope that behaves like a thermal battery and supports smaller mechanical systems.",
+};
+
 export default function PlatformPage() {
   return (
     <div>

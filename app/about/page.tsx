@@ -1,5 +1,11 @@
 import Link from "next/link";
 
+export const metadata = {
+  title: "About Blue Planet Building Panels",
+  description:
+    "Blue Planet Building Panels designs and manufactures BP2 RIPS structural concrete insulated panels for high-performance construction.",
+};
+
 export default function AboutPage() {
   return (
     <div>

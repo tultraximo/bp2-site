@@ -1,5 +1,11 @@
 import Link from "next/link";
 
+export const metadata = {
+  title: "BP2 RIPS vs SCIP | Reinforced Insulated Panel System",
+  description:
+    "BP2 RIPS is a fully engineered structural concrete insulated panel system. Compare RIPS to other SCIPs, ICFs, and SIPs. IRC, IBC, and ACI 318 code path.",
+};
+
 export default function RipsPage() {
   return (
     <div>

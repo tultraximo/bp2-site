@@ -1,5 +1,11 @@
 import Link from "next/link";
 
+export const metadata = {
+  title: "Contact Blue Planet Building Panels | Los Angeles",
+  description:
+    "Contact Blue Planet Building Panels in Los Angeles to discuss BP2 RIPS for architectural and engineering projects.",
+};
+
 export default function ContactPage() {
   return (
     <div>

@@ -1,5 +1,11 @@
 import Link from "next/link";
 
+export const metadata = {
+  title: "BP2 RIPS Technical Specs | IRC, IBC, ACI 318",
+  description:
+    "Technical overview of BP2 RIPS panels: code compliance, structural capability, thermal mass, airtightness, fire rating, and acoustic performance.",
+};
+
 export default function TechnicalPage() {
   return (
     <div>

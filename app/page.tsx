@@ -1,6 +1,12 @@
 import Link from "next/link";
 import Image from "next/image";
 
+export const metadata = {
+  title: "Blue Planet Building Panels | BP2 RIPS Structural Panels",
+  description:
+    "Blue Planet Building Panels (BP2) manufactures RIPS — code-compliant structural concrete insulated panels for walls, roofs, and floors. Fire-resistant SCIP-class construction.",
+};
+
 export default function HomePage() {
   return (
     <div className="min-h-screen bg-gray-100 px-4 py-3 sm:px-6">
@@ -31,6 +37,14 @@ export default function HomePage() {
               <h1 className="mt-3 text-4xl font-bold tracking-tight text-gray-900 md:text-5xl">
                 BP2 RIPS Building Systems
               </h1>
+
+              <p className="mx-auto mt-6 max-w-3xl text-lg leading-relaxed text-gray-700">
+                Blue Planet Building Panels (BP2) manufactures RIPS — a Reinforced Insulated
+                Panel System in the SCIP family of structural concrete insulated panels.
+                The panels are code-compliant for IRC and IBC work, designed to ACI 318,
+                and used as a fire-resistant concrete alternative to wood framing for walls,
+                roofs, and floors.
+              </p>
               <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-gray-700">
                 Code-compliant structural panels that deliver a high-performance
                 building platform — full structural capability, exceptional

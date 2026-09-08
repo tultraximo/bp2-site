@@ -1,5 +1,11 @@
 import Link from "next/link";
 
+export const metadata = {
+  title: "RIPS Applications | Housing, Resilience, Mixed-Use",
+  description:
+    "BP2 RIPS applications: workforce housing, disaster resilience, mixed-use, institutional, and security construction.",
+};
+
 export default function ApplicationsPage() {
   return (
     <div>

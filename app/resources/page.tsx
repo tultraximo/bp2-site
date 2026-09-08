@@ -1,5 +1,11 @@
 import Link from "next/link";
 
+export const metadata = {
+  title: "BP2 RIPS Resources and Mentions",
+  description:
+    "Public references, technical documents, and third-party mentions of Blue Planet Building Panels and BP2 RIPS.",
+};
+
 export default function ResourcesPage() {
   return (
     <div>

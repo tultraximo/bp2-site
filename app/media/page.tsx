@@ -1,5 +1,11 @@
 import Link from "next/link";
 
+export const metadata = {
+  title: "BP2 RIPS Videos | System, History, Trial by Fire",
+  description:
+    "Videos on the BP2 RIPS system, building history, fire performance, and studio applications.",
+};
+
 const videos = [
   {
     title: "The System",

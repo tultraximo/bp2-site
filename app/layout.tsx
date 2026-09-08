@@ -9,10 +9,22 @@ const inter = Inter({
   variable: "--font-inter",
 });
 
-export const metadata: Metadata = {
-  title: "Blue Planet | BP2 RIPS High-Performance Building Systems",
+export const metadata = {
+  title: {
+    default: "Blue Planet Building Panels | BP2 RIPS Structural Panels",
+    template: "%s | Blue Planet Building Panels",
+  },
   description:
-    "Code-compliant reinforced insulated panel systems that deliver full structural capability, exceptional thermal mass, and the foundation for lower-energy, resilient buildings.",
+    "Blue Planet Building Panels (BP2) manufactures RIPS — code-compliant structural concrete insulated panels for walls, roofs, and floors. Fire-resistant SCIP-class construction.",
+  metadataBase: new URL("https://bp2-site.vercel.app"),
+  openGraph: {
+    title: "Blue Planet Building Panels | BP2 RIPS Structural Panels",
+    description:
+      "Code-compliant RIPS / SCIP structural panels. Fire-resistant, high-mass, airtight envelope systems for architects and engineers.",
+    url: "https://bp2-site.vercel.app",
+    siteName: "Blue Planet Building Panels",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
