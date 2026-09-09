@@ -12,7 +12,7 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   icons: {
-  icon: "/logo.png",
+    icon: "/icon.png",
   },
   title: {
     default: "Blue Planet Building Panels | BP2 RIPS Structural Panels",
