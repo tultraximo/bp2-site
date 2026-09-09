@@ -17,47 +17,13 @@ export default function ContactPage() {
                 Contact Blue Planet Building Panels
               </h1>
               <p className="mx-auto mt-4 max-w-2xl text-gray-600">
-                Architects and engineers: tell us about the project and we will
-                follow up. You can also call or email directly.
+                Architects and engineers: tell us about the project and we will follow up.
+                You can also call or email using the information in the footer.
               </p>
             </div>
           </section>
 
-          <section className="grid gap-6 md:grid-cols-3">
-            <div className="rounded-xl border border-gray-300 bg-white p-6 text-sm text-gray-700 shadow-sm md:col-span-1">
-              <div className="font-semibold text-gray-900">
-                Blue Planet Building Panels
-              </div>
-              <p className="mt-3">
-                9200 S Vermont Ave
-                <br />
-                Los Angeles, CA 90044
-                <br />
-                United States
-              </p>
-              <p className="mt-3">
-                Monday – Friday: 8am – 5pm
-                <br />
-                Saturday – Sunday: Closed
-              </p>
-              <p className="mt-3">
-                <a
-                  href="mailto:rob.m@bp2panels.com"
-                  style={{ color: "#3F6FEC" }}
-                >
-                  rob.m@bp2panels.com
-                </a>
-                <br />
-                <a href="tel:9512265422" style={{ color: "#3F6FEC" }}>
-                  (951) 226-5422
-                </a>
-              </p>
-            </div>
-
-            <div className="md:col-span-2">
-              <ContactForm />
-            </div>
-          </section>
+          <ContactForm />
         </div>
       </div>
     </div>
