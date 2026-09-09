@@ -10,19 +10,19 @@ const inter = Inter({
   variable: "--font-inter",
 });
 
-export const metadata = {
+export const metadata: Metadata = {
   title: {
     default: "Blue Planet Building Panels | BP2 RIPS Structural Panels",
     template: "%s | Blue Planet Building Panels",
   },
   description:
     "Blue Planet Building Panels (BP2) manufactures RIPS — code-compliant structural concrete insulated panels for walls, roofs, and floors. Fire-resistant SCIP-class construction.",
-  metadataBase: new URL("https://bp2-site.vercel.app"),
+  metadataBase: new URL("https://bp2panels.com"),
   openGraph: {
     title: "Blue Planet Building Panels | BP2 RIPS Structural Panels",
     description:
       "Code-compliant RIPS / SCIP structural panels. Fire-resistant, high-mass, airtight envelope systems for architects and engineers.",
-    url: "https://bp2-site.vercel.app",
+    url: "https://bp2panels.com",
     siteName: "Blue Planet Building Panels",
     type: "website",
   },
@@ -30,15 +30,13 @@ export const metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en">
       <body className={`${inter.variable} antialiased font-sans`}>
         <Header />
-        <main className="min-h-screen">{children}</main>
-        <Footer /><Header />
         <main className="min-h-screen">{children}</main>
         <Footer />
         <ContactButton />
