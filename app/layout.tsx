@@ -11,6 +11,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  icons: {
+  icon: "/logo.png",
+  },
   title: {
     default: "Blue Planet Building Panels | BP2 RIPS Structural Panels",
     template: "%s | Blue Planet Building Panels",
