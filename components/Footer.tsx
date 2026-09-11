@@ -57,6 +57,12 @@ export default function Footer() {
               <div className="flex flex-col gap-2">
                 <div className="font-semibold text-gray-900">Explore</div>
                 <Link
+                  href="/projects"
+                  className="rounded-md border border-gray-200 bg-gray-50 px-3 py-2 font-medium text-black transition-colors hover:border-transparent hover:bg-[#3F6FEC] hover:text-white"
+                >
+                  Projects
+                </Link>
+                <Link
                   href="/rips"
                   className="rounded-md border border-gray-200 bg-gray-50 px-3 py-2 font-medium text-black transition-colors hover:border-transparent hover:bg-[#3F6FEC] hover:text-white"
                 >

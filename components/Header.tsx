@@ -3,12 +3,6 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
-import { Bebas_Neue } from "next/font/google";
-
-const bebasNeue = Bebas_Neue({
-  subsets: ["latin"],
-  weight: "400",
-});
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -17,6 +11,7 @@ export default function Header() {
     { href: "/rips", label: "RIPS" },
     { href: "/platform", label: "Platform" },
     { href: "/technical", label: "Technical" },
+    { href: "/projects", label: "Projects" },
     { href: "/applications", label: "Applications" },
     { href: "/team", label: "Team" },
     { href: "/media", label: "Media" },
@@ -29,10 +24,13 @@ export default function Header() {
   return (
     <div className="bg-gray-100 px-4 pt-3 sm:px-6">
       <header className="mx-auto max-w-6xl overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm">
-        <div className="flex items-center justify-between gap-4 px-5 py-5">
-
-          {/* Desktop Logo */}
-          <Link href="/" onClick={() => setIsOpen(false)} className="hidden flex-shrink-0 lg:block">
+        <div className="flex items-center justify-between gap-4 px-6 py-5">
+          {/* Desktop logo */}
+          <Link
+            href="/"
+            onClick={() => setIsOpen(false)}
+            className="hidden flex-shrink-0 items-center justify-center px-6 lg:flex"
+          >
             <Image
               src="/logo.png"
               alt="Blue Planet Building Panels"
@@ -44,16 +42,25 @@ export default function Header() {
             />
           </Link>
 
-          {/* Mobile Title */}
-          <Link
-            href="/"
-            onClick={() => setIsOpen(false)}
-            className={`flex-1 text-center lg:hidden ${bebasNeue.className}`}
-          >
-            <div className="text-4xl tracking-wider text-gray-900 sm:text-5xl">
-              BLUE PLANET BUILDING PANELS
-            </div>
-          </Link>
+          {/* Mobile logo, centered */}
+          <div className="flex flex-1 items-center lg:hidden">
+            <div className="w-12 shrink-0" />
+            <Link
+              href="/"
+              onClick={() => setIsOpen(false)}
+              className="flex flex-1 items-center justify-center"
+            >
+              <Image
+                src="/logo.png"
+                alt="Blue Planet Building Panels"
+                width={300}
+                height={110}
+                className="h-[6.125rem] w-auto"
+                style={{ width: "auto", height: "auto", maxHeight: "6.125rem" }}
+                priority
+              />
+            </Link>
+          </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden flex-wrap items-center justify-end gap-3 text-lg font-semibold lg:flex">
@@ -71,7 +78,7 @@ export default function Header() {
           {/* Mobile Menu Button */}
           <button
             type="button"
-            className="mr-1 inline-flex items-center justify-center rounded-lg border border-gray-300 bg-gray-50 p-3 shadow-sm hover:bg-gray-100 lg:hidden"
+            className="inline-flex w-12 items-center justify-center rounded-lg border border-gray-300 bg-gray-50 p-3 shadow-sm hover:bg-gray-100 lg:hidden"
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle menu"
           >
@@ -87,7 +94,6 @@ export default function Header() {
           </button>
         </div>
 
-        {/* Mobile Menu */}
         {isOpen && (
           <div className="border-t border-gray-200 lg:hidden">
             <nav className="flex flex-col gap-2 px-5 py-4">

@@ -3,71 +3,55 @@ import Link from "next/link";
 export const metadata = {
   title: "BP2 RIPS Videos | System, History, Trial by Fire",
   description:
-    "Videos on the BP2 RIPS system, building history, fire performance, and studio applications.",
+    "Videos on the BP2 RIPS system, building history, the Malibu fire house, and studio acoustics.",
 };
 
 const videos = [
   {
     title: "The System",
-    description: "A clear explanation of how the RIPS panels work.",
-    videoId: "bLN7XIzlceg",
+    id: "bLN7XIzlceg",
+    note: "A clear explanation of how the RIPS panels work.",
   },
   {
     title: "History",
-    description:
-      "A high-level look at how people have built and why RIPS offers a better path.",
-    videoId: "Qt5WtZ94UrA",
+    id: "Qt5WtZ94UrA",
+    note: "A high-level look at how people have built and why RIPS offers a better path.",
   },
   {
     title: "Trial by Fire",
-    description:
-      "A home built with our panels that withstood the Malibu fires.",
-    videoId: "xlWOTZZ5Bl0",
+    id: "xlWOTZZ5Bl0",
+    note: "A home built with our panels that withstood the Malibu fires.",
   },
   {
     title: "Studio Ready",
-    description: "Dustin Ebsen on why the system works well for sound studios.",
-    videoId: "7f8iS92xY5E",
+    id: "7f8iS92xY5E",
+    note: "Dustin Ebsen on why the system works well for sound studios.",
   },
 ];
 
 export default function MediaPage() {
   return (
-    <div>
-      {/* Hero */}
-      <section className="bg-gray-50">
-        <div className="mx-auto max-w-6xl px-6 py-16 md:py-24">
-          <div className="max-w-3xl">
+    <div className="min-h-screen bg-gray-100 px-4 py-3 sm:px-6">
+      <div className="mx-auto max-w-6xl overflow-hidden rounded-xl border border-gray-200 bg-gray-50 p-4 shadow-sm sm:p-6 md:p-8">
+        <div className="space-y-6">
+          <section className="overflow-hidden rounded-xl border border-gray-300 bg-white px-6 py-10 text-center shadow-sm md:px-10">
             <p className="text-sm font-semibold uppercase tracking-wider text-gray-500">
               Videos & Resources
             </p>
-            <h1 className="mt-3 text-4xl font-bold tracking-tight text-gray-900 md:text-5xl">
-              Media
-            </h1>
-            <p className="mt-6 text-lg leading-relaxed text-gray-600">
-              Watch key videos that explain the RIPS system, its performance in
-              real conditions, and the thinking behind it.
-            </p>
-          </div>
-        </div>
-      </section>
+            <h1 className="mt-3 text-3xl font-bold text-gray-900 md:text-4xl">Media</h1>
+          </section>
 
-      {/* Videos */}
-      <section className="bg-white">
-        <div className="mx-auto max-w-6xl px-6 py-16">
-          <div className="grid gap-12 md:grid-cols-2">
+          <section className="grid gap-8 md:grid-cols-2">
             {videos.map((video) => (
-              <div key={video.videoId} className="flex flex-col">
-                <h2 className="text-xl font-bold text-gray-900">
-                  {video.title}
-                </h2>
-                <p className="mt-2 text-sm text-gray-600">
-                  {video.description}
-                </p>
-                <div className="mt-4 aspect-video overflow-hidden rounded-lg bg-gray-100">
+              <div key={video.id}>
+                <div className="mb-3 text-center">
+                  <h2 className="text-lg font-semibold text-gray-900">{video.title}</h2>
+                  <p className="mt-1 text-sm text-gray-600">{video.note}</p>
+                </div>
+                <div className="aspect-video overflow-hidden rounded-lg">
                   <iframe
                     className="h-full w-full"
-                    src={`https://www.youtube.com/embed/${video.videoId}`}
+                    src={`https://www.youtube.com/embed/${video.id}`}
                     title={video.title}
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen
@@ -75,29 +59,25 @@ export default function MediaPage() {
                 </div>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
+          </section>
 
-      {/* CTA */}
-      <section className="border-t border-gray-200 bg-gray-50">
-        <div className="mx-auto max-w-6xl px-6 py-16 text-center">
-          <h2 className="text-2xl font-bold tracking-tight text-gray-900">
-            Meet the people behind the system
-          </h2>
-          <p className="mx-auto mt-4 max-w-xl text-gray-600">
-            Hear directly from the team in their own words.
-          </p>
-          <div className="mt-8">
+          <section className="overflow-hidden rounded-xl border border-gray-300 bg-gray-100 p-6 text-center shadow-sm">
+            <h2 className="text-lg font-semibold text-gray-900">
+              Meet the people behind the system
+            </h2>
+            <p className="mt-2 text-gray-600">
+              Hear directly from the team in their own words.
+            </p>
             <Link
               href="/team"
-              className="inline-block rounded-md bg-gray-900 px-8 py-3 text-sm font-medium text-white hover:bg-gray-800"
+              className="mt-4 inline-block rounded-md px-6 py-3 text-sm font-medium text-white"
+              style={{ backgroundColor: "#3F6FEC" }}
             >
               Meet the Team
             </Link>
-          </div>
+          </section>
         </div>
-      </section>
+      </div>
     </div>
   );
 }
