@@ -1,5 +1,8 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const projects = [
   {
@@ -41,12 +44,18 @@ const projects = [
 ];
 
 export default function ProjectStrip() {
+  const pathname = usePathname();
+
+  if (pathname.startsWith("/projects")) {
+    return null;
+  }
+
   return (
     <div className="bg-gray-100 px-4 pt-3 pb-0 sm:px-6">
       <div className="mx-auto max-w-6xl overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm">
         <div className="p-4">
           <p className="text-center text-sm font-bold tracking-wide text-gray-900 sm:text-base">
-            CLICK ON A PROJECT BELOW TO SEE OUR PRODUCT IN USE
+            CLICK OUR PROJECTS TO SEE OUR PRODUCT IN USE
           </p>
 
           <div className="mt-4 flex items-start gap-4 overflow-x-auto">

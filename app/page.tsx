@@ -14,8 +14,8 @@ export default function HomePage() {
       {/* Large outer encapsulating card – off white */}
       <div className="mx-auto max-w-6xl overflow-hidden rounded-xl border border-gray-200 bg-gray-50 p-4 shadow-sm sm:p-6 md:p-8">
         <div className="space-y-6">
-          {/* Logo Card */}
-          <section className="overflow-hidden rounded-xl border border-gray-300 bg-white shadow-sm">
+          {/* Logo Card — desktop only, same breakpoint as hamburger */}
+          <section className="hidden overflow-hidden rounded-xl border border-gray-300 bg-white shadow-sm lg:block">
             <div className="flex justify-center px-6 py-10 md:px-10">
               <Image
                 src="/logo.png"
