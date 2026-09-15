@@ -1,5 +1,5 @@
-import Image from "next/image";
 import Link from "next/link";
+import Photos from "./Photos";
 
 export const metadata = {
   title: "Forchelli Residence, Driggs ID | BP2 SCIP Basement",
@@ -47,73 +47,7 @@ export default function ForchelliPage() {
             </div>
           </section>
 
-          <section className="overflow-hidden rounded-xl border border-gray-300 bg-white shadow-sm">
-            <Image
-              src="/projects/forchelli-driggs/01-house.png"
-              alt="Forchelli residence"
-              width={1200}
-              height={750}
-              className="h-auto w-full"
-              priority
-            />
-          </section>
-
-          <section className="grid gap-6 md:grid-cols-2">
-            <div className="overflow-hidden rounded-xl border border-gray-300 bg-white shadow-sm">
-              <Image
-                src="/projects/forchelli-driggs/02-drawing.png"
-                alt="Basement SCIP drawing"
-                width={1200}
-                height={750}
-                className="h-auto w-full"
-              />
-            </div>
-            <div className="overflow-hidden rounded-xl border border-gray-300 bg-white shadow-sm">
-              <Image
-                src="/projects/forchelli-driggs/03-panels.png"
-                alt="Panel basement walls"
-                width={1200}
-                height={750}
-                className="h-auto w-full"
-              />
-            </div>
-            <div className="overflow-hidden rounded-xl border border-gray-300 bg-white shadow-sm">
-              <Image
-                src="/projects/forchelli-driggs/04-crew.png"
-                alt="Construction crew"
-                width={1200}
-                height={750}
-                className="h-auto w-full"
-              />
-            </div>
-            <div className="overflow-hidden rounded-xl border border-gray-300 bg-white shadow-sm">
-              <Image
-                src="/projects/forchelli-driggs/05-pour.png"
-                alt="Concrete work"
-                width={1200}
-                height={750}
-                className="h-auto w-full"
-              />
-            </div>
-            <div className="overflow-hidden rounded-xl border border-gray-300 bg-white shadow-sm">
-              <Image
-                src="/projects/forchelli-driggs/06-walls.png"
-                alt="Formed basement walls"
-                width={1200}
-                height={750}
-                className="h-auto w-full"
-              />
-            </div>
-            <div className="overflow-hidden rounded-xl border border-gray-300 bg-white shadow-sm">
-              <Image
-                src="/projects/forchelli-driggs/07-walls.png"
-                alt="Additional basement wall construction"
-                width={1200}
-                height={750}
-                className="h-auto w-full"
-              />
-            </div>
-          </section>
+          <Photos />
 
           <section className="overflow-hidden rounded-xl border border-gray-300 bg-white p-6 text-center shadow-sm">
             <div className="flex flex-wrap justify-center gap-3">
