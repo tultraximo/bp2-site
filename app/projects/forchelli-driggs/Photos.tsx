@@ -65,13 +65,13 @@ export default function Photos() {
 
       {open !== null && (
         <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/75 p-4"
+          className="fixed inset-0 z-50 flex items-center justify-center overflow-auto bg-black/75 p-3"
           onClick={() => setOpen(null)}
         >
           <img
             src={photos[open].src}
             alt={photos[open].alt}
-            className="max-h-[85vh] w-auto max-w-5xl object-contain"
+            className="h-auto w-auto max-h-[calc(100dvh-1.5rem)] max-w-[calc(100vw-1.5rem)] object-contain"
             onClick={(e) => e.stopPropagation()}
           />
         </div>
