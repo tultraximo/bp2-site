@@ -27,7 +27,7 @@ const groups = [
     items: [
       {
         q: "What is the R-Value / thermal performance?",
-        a: "BP2 panels deliver approximately R-40 performance when evaluated using standard methods (ASHRAE / California Title 20 approaches). The combination of the foam core, isolated concrete shells, and near-zero air infiltration creates both high insulation and significant thermal mass.",
+        a: "BP2 panels deliver approximately R-40 performance when evaluated using standard methods (ASHRAE / California Title 24 approaches). The combination of the foam core, isolated concrete shells, and near-zero air infiltration creates both high insulation and significant thermal mass.",
       },
       {
         q: "What about thermal bridging?",
