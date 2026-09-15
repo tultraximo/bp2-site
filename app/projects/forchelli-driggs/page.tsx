@@ -32,6 +32,21 @@ export default function ForchelliPage() {
             </p>
           </section>
 
+          <section>
+            <p className="mb-3 text-center text-sm text-gray-600">
+              BLU-D Commercial Framing — Driggs, Idaho
+            </p>
+            <div className="aspect-video overflow-hidden rounded-lg">
+              <iframe
+                className="h-full w-full"
+                src="https://www.youtube.com/embed/izO5lwOFNFQ"
+                title="Blu-D Construction: Driggs Idaho"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
+            </div>
+          </section>
+
           <section className="overflow-hidden rounded-xl border border-gray-300 bg-white shadow-sm">
             <Image
               src="/projects/forchelli-driggs/01-house.png"
