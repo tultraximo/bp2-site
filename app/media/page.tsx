@@ -9,22 +9,22 @@ export const metadata = {
 const videos = [
   {
     title: "The System",
-    id: "bLN7XIzlceg",
+    id: "RAG6IGeOEoI",
     note: "A clear explanation of how the RIPS panels work.",
   },
   {
     title: "History",
-    id: "Qt5WtZ94UrA",
+    id: "SH2asnVpTAM",
     note: "A high-level look at how people have built and why RIPS offers a better path.",
   },
   {
     title: "Trial by Fire",
-    id: "xlWOTZZ5Bl0",
+    id: "QYIVUVfUpxg",
     note: "A home built with our panels that withstood the Malibu fires.",
   },
   {
     title: "Studio Ready",
-    id: "7f8iS92xY5E",
+    id: "m59-ObO9-Bw",
     note: "Dustin Ebsen on why the system works well for sound studios.",
   },
 ];
@@ -41,14 +41,13 @@ export default function MediaPage() {
             <h1 className="mt-3 text-3xl font-bold text-gray-900 md:text-4xl">Media</h1>
           </section>
 
-          <section className="grid gap-8 md:grid-cols-2">
+          <section className="grid gap-6 md:grid-cols-2">
             {videos.map((video) => (
-              <div key={video.id}>
-                <div className="mb-3 text-center">
-                  <h2 className="text-lg font-semibold text-gray-900">{video.title}</h2>
-                  <p className="mt-1 text-sm text-gray-600">{video.note}</p>
-                </div>
-                <div className="aspect-video overflow-hidden rounded-lg">
+              <div
+                key={video.id}
+                className="flex flex-col overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm"
+              >
+                <div className="aspect-video w-full">
                   <iframe
                     className="h-full w-full"
                     src={`https://www.youtube.com/embed/${video.id}`}
@@ -56,6 +55,10 @@ export default function MediaPage() {
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen
                   />
+                </div>
+                <div className="flex flex-1 flex-col px-5 py-4 text-center">
+                  <h2 className="text-lg font-semibold text-gray-900">{video.title}</h2>
+                  <p className="mt-1 text-sm text-gray-600">{video.note}</p>
                 </div>
               </div>
             ))}

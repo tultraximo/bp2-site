@@ -10,9 +10,9 @@ const team = [
   { name: "Alan Khedari", id: "-Ne2kfXpymU" },
   { name: "Jennifer Hoppel", id: "hrpnBHsKkIc" },
   { name: "Todd Fisher", id: "zUAolV1I8tE" },
-  { name: "John Shepherd", id: "vDZ04t_bLAg" },
-  { name: "Rob Manchise", id: "xnRpMTqd80c" },
-  { name: "Mark Heath", id: "OxTiexrenDw" },
+  { name: "John Shepherd", id: "xZg5U0c35Ik" },
+  { name: "Rob Manchise", id: "UGpgjMr2Dlg" },
+  { name: "Mark Heath", id: "HmedGMsdpHg" },
 ];
 
 export default function TeamPage() {
